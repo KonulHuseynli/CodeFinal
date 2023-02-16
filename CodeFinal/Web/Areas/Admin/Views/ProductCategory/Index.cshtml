@@ -1,0 +1,34 @@
+﻿@using Web.Areas.Admin.ViewModels.ProductCategory
+@model ProductCategoryIndexVM
+
+<a class="btn btn-primary" asp-action="create" asp-controller="productcategory">Create</a>
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Title</th>
+            <th scope="col">CreateAt</th>
+            <th scope="col">ModifiedAt</th>
+            <th scope="col">Actions</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var productCategory in Model.ProductCategories)
+        {
+            <tr>
+                <td>@productCategory.Id</td>
+                <td>@productCategory.Title</td>
+                <td>@productCategory.CreatedAt.ToShortDateString()</td>
+                <td>@productCategory.ModifiedAt.ToShortDateString()</td>
+                <td>
+                    <a class="btn btn-primary" asp-action="update" asp-controller="productcategory" asp-route-id="@productCategory.Id">Update</a>
+                    <form method="post" asp-action="delete" asp-controller="productcategory" asp-route-id="@productCategory.Id">
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>

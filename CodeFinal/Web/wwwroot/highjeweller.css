@@ -1,0 +1,456 @@
+.HighjewellerPage {
+    height: 100vh;
+    overflow-x: hidden;
+}
+html{
+    scroll-behavior:smooth;
+  }
+  
+.HighjewellerPage::-webkit-scrollbar{
+    display:none;
+    position: fixed;
+    overflow: scroll;
+}
+.slider_images{
+    margin-left: 350px;
+}
+.finejewellery_info{
+    padding-left: 30px;
+    width: 22%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 45px;
+    margin-top: 10px;
+    position: absolute;
+  }
+.high {
+    position: relative;
+    z-index: 3;
+    background: #fff;
+    padding: 0px;
+}
+.high__container {
+    padding: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.high__list {
+    margin-top: 0px;
+}
+.high__row:nth-child(2n-1) {
+    flex-direction: row;
+}
+
+.high__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f9f9f9;
+}
+.high__row:nth-child(2n) {
+    flex-direction: row-reverse;
+}
+.high__left {
+    width: 50%;
+    background: #fff;
+}
+
+.img-container {
+    display: grid;
+    overflow: hidden;
+}
+.high__left img {
+    width: 100%;
+    max-height: 776px;
+    object-fit: cover;
+}
+
+.img-container img {
+    height: auto;
+}
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.high__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    padding: 150px;
+}
+.bridal__name {
+    width: 100%;
+    text-align: left;
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 300;
+    margin-bottom: 32px;
+    color:#0D2A39;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.bridal__text {
+    text-align: left;
+    margin-bottom: 40px;
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 300;
+    font-family:Arial, Helvetica, sans-serif;
+    color:#535353;
+}
+.bridal__btn {
+    text-transform: uppercase;
+}
+
+.bridal__btn {
+    margin-right: auto;
+    color: #0D2A39;
+}
+.bridal__text p {
+    max-width: 70%;
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+/*
+@media (max-width: 1024px) {
+    .fine {
+        padding-top: 5px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .fine {
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .finejewellery {
+        padding: 45px 30px;
+        position: relative;
+    }
+}
+
+@media (max-width: 1200px) {
+    .finejewellery_info {
+        width: 20%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .finejewellery_slider {
+        margin-top: 160px;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .finejewellery {
+        padding: 38px 30px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .finejewellery_info {
+        padding-bottom: 30px;
+        padding-left: 0;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .finejewellery__title {
+        margin-bottom: 15px;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .finejewellery__text {
+        margin-bottom: 15px;
+        width:10%;
+        
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .finejewellery__title {
+        align-items: center;
+        padding-left: 150px;
+        font-size: 32px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .slider_images {
+        height: 94px;
+        margin-left: 10%;
+        margin-top:30px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .slider_images div img {
+        height: 40px;
+        width: 10%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .collection__list {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width: 1200px) {
+    .collection__item:nth-child(-n+2) {
+        border-top: 1px solid var(--greyCool);
+    }
+}
+
+@media (max-width: 1470px) {
+    .collection__img img {
+        height: 350px;
+    }
+}
+
+@media (max-width: 1690px) {
+    .collection__img img {
+        height: 400px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .collection__item:nth-child(-n+3) {
+        border-top: unset;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .collection__list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .collection__name {
+        font-size: 22px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .collection__desc {
+        font-size: 16px;
+        margin-bottom: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+
+@media (max-width: 625px) {
+    .line-button {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    #my-scrollbar {
+        overflow: auto !important;
+    }
+}
+@media only screen and (max-width: 767px) {
+    main {
+        padding-top: 57px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .high {
+        padding-bottom: 30px;
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 1024px) {
+    .high {
+        padding-bottom: 60px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .high__row {
+        background: none;
+    }
+}
+@media (max-width: 1024px) {
+    .high__row:nth-child(2n-1) {
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .high__left {
+        margin-bottom: 30px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .high__left {
+        margin-bottom: 40px;
+        width: 50%;
+    }
+}
+@media (max-width: 1024px) {
+    .high__right {
+        padding: 0;
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .bridal__name {
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .bridal__name {
+        font-size: 16px;
+    }
+}
+@media (max-width: 1024px) {
+    .high__row:nth-child(2n) {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1024px) {
+    .high__row {
+        background: none;
+    }
+}
+@media (max-width: 1024px) {
+    .high__row:nth-child(2n-1) {
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .high__left {
+        margin-bottom: 30px;
+        width: 100%;
+    }
+}
+@media (max-width: 1024px) {
+    .high__left {
+        margin-bottom: 40px;
+        width: 50%;
+    }
+}
+@media (max-width: 1024px) {
+    .high__right {
+        padding: 0;
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .bridal__name {
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .bridal__name {
+        font-size: 16px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .slider-card {
+        padding: 38px 30px;
+        text-align: center;
+    }
+}
+{
+    @media (max-width: 1200px) {
+        .slider-card {
+        padding: 45px 30px;
+        position: relative;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .slider-card__info {
+        padding-bottom: 30px;
+        padding-left: 0;
+    }
+}
+@media (max-width: 1200px){ .slider-card__info {
+    width: 100%;
+}}
+@media (max-width: 1200px) {
+    .slider-card__list {
+        margin-bottom: 60px;
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .slider-card__title {
+        margin-bottom: 15px;
+    }
+}
+    @media only screen and (max-width: 767px) {
+        .slider-card__title {
+            font-size: 16px;
+        }
+    }
+@media (max-width: 1200px) {
+    .slider-card__item {
+        padding-right: 0;
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    .slider-card__item .img-container {
+        height: 194px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .slider-card__item .img-container img {
+        height: 240px;
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    .slider-card__item .img-container img {
+        height: 215px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .slider-card__item:not(.img-container) img {
+        height: 194px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .slider-card__left, .slider-card__right {
+        display: none;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .slider-card__left, .slider-card__right {
+        display: none;
+    }
+}*/

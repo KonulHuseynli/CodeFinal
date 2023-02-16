@@ -1,0 +1,17 @@
+﻿@using Core.Constants
+@using Web.Areas.Admin.ViewModels.ProductCategory
+@model ProductCategoryCreateVM
+
+<form enctype="multipart/form-data" asp-action="create" asp-controller="productcategory" method="post">
+
+     <div class="form-group">
+        <label asp-for="Title">Title</label>
+        <input class="form-control" asp-for="Title">
+        <span asp-validation-for="Title"></span>
+    </div>
+   
+
+
+    <button type="submit" class="btn btn-primary">Create</button>
+    <a class="btn btn-danger" asp-action="index" asp-controller="productcategory">Cancel</a>
+</form>

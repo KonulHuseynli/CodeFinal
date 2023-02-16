@@ -1,0 +1,29 @@
+﻿@using Web.Areas.Admin.ViewModels.ShopProduct
+@model ShopProductUpdateVM
+
+<form enctype="multipart/form-data" asp-action="update" asp-controller="shopproduct" method="post">
+
+     <div class="form-group">
+        <label asp-for="Title">Title</label>
+        <input class="form-control" asp-for="Title">
+        <span asp-validation-for="Title"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Price">Price</label>
+        <input class="form-control" asp-for="Price">
+        <span asp-validation-for="Price"></span>
+    </div>
+      <div class="form-group">
+        <label asp-for="CategoryId">Category</label>
+        <select class="form-select" asp-for="CategoryId" asp-items="Model.Categories"></select>
+        <span asp-validation-for="CategoryId"></span>
+    </div>
+      <div class="form-group">
+        <label asp-for="MainPhoto">MainPhoto</label>
+        <input class="form-control" asp-for="MainPhoto">
+        <span asp-validation-for="MainPhoto"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update</button>
+    <a class="btn btn-danger" asp-action="index" asp-controller="shopproduct">Cancel</a>
+</form>

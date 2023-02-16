@@ -1,0 +1,25 @@
+﻿@using Web.ViewModels.Shop
+@model ShopIndexVM
+
+
+@foreach (var product in Model.ShopProducts)
+{
+    <div class="col-lg-4 col-md-6 pb-5">
+        <div class="productt" id="@product.Id">
+            <div class="product-image"
+             style="background-image: url(assets/img/@product.PhotoName);">
+                <div class="basket-wishlist-compare d-flex justify-content-center">
+                    <div id="addToCart" data-price="@product.Price" data-title="@product.Title" data-photoname="@product.PhotoName" data-id="@product.Id" class=" text-center">
+                        <i class="fas fa-shopping-basket"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="product-inf">
+                <h5 class="productt-name" id="titledi">@product.Title</h5>
+                <p><span>$</span><span class="price">@product.Price</span></p>
+            </div>
+        </div>
+    </div>
+
+}
+
